@@ -27,3 +27,6 @@ tools/shots/
 tools/*.jpg
 *.tsbuildinfo
 .vercel
+
+.vercel
+.env*

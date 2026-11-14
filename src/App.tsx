@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from 'react'
 import { PausedCtx, StepCtx } from './fx'
 import { Scene1, Scene2, Scene3, Scene4, Scene5, A } from './scenes1'
+import { Scene10, Scene11 } from './scenes3'
 import { Scene6, Scene7, Scene8, Scene9, DEMO_IMAGES } from './scenes2'
 import { audioCue, sound } from './audio'
 import {
@@ -17,7 +18,7 @@ import {
 import { Presenter, ScriptPage } from './Presenter'
 import { readHash, useElapsed, timerControls, useSync } from './shared'
 
-const COMPONENTS: ComponentType[] = [Scene1, Scene2, Scene3, Scene4, Scene5, Scene6, Scene7, Scene8, Scene9]
+const COMPONENTS: ComponentType[] = [Scene1, Scene2, Scene3, Scene4, Scene5, Scene6, Scene7, Scene8, Scene9, Scene10, Scene11]
 
 /* ───────────────────────── Stage ───────────────────────── */
 function Stage() {

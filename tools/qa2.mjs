@@ -1,0 +1,11 @@
+import { chromium } from 'playwright-core';
+const b = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
+const p = await (await b.newContext({ viewport: { width: 1920, height: 1080 } })).newPage();
+const errs=[]; p.on('pageerror',e=>errs.push(e.message)); p.on('console',m=>m.type()==='error'&&errs.push(m.text()));
+await p.goto('http://localhost:4173/#9.0'); await p.waitForTimeout(1500);
+await p.keyboard.press('ArrowRight'); await p.waitForTimeout(2200); await p.screenshot({path:'tools/shots/t0.png'});
+await p.keyboard.press('ArrowRight'); await p.waitForTimeout(3500); await p.screenshot({path:'tools/shots/t1.png'});
+await p.keyboard.press('ArrowRight'); await p.waitForTimeout(2500); await p.screenshot({path:'tools/shots/a0.png'});
+await p.keyboard.press('ArrowRight'); await p.waitForTimeout(4500); await p.screenshot({path:'tools/shots/a1.png'});
+console.log(await p.evaluate(()=>location.hash), errs.join('|')||'NO ERRORS');
+await b.close();

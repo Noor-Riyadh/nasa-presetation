@@ -8,6 +8,7 @@ export type SceneMeta = {
   start: number // target start (seconds)
   end: number // target end (seconds)
   speaker: 'Speaker 1' | 'Speaker 2'
+  appendix?: boolean // after the finale (Q&A backdrop); excluded from the 6:15 target
   cueLabels: string[] // what each step shows on screen (for the presenter view)
   script: string[]
   note?: string
@@ -247,9 +248,33 @@ export const SCENES: SceneMeta[] = [
     ],
     note: 'الأسطر الثلاثة بتظهر واحد واحد — اسيب كل سطر ياخد وقته. الختام: "Turning NASA\'s research into actionable scientific insight." ثم Thank you.',
   },
+  {
+    id: 'team',
+    title: 'The Team',
+    steps: 2,
+    start: 375,
+    end: 375,
+    speaker: 'Speaker 1',
+    appendix: true,
+    cueLabels: ['The Team (title)', 'Four team members and their roles'],
+    script: ['▶ 1 — الفريق', '(قدّم أعضاء الفريق وأدوار كل واحد — جملة لكل شخص.)'],
+    note: 'شريحة الفريق — الأدوار مكتوبة بالإنجليزي على الشاشة. عدّل الأوصاف في src/scenes3.tsx لو محتاج.',
+  },
+  {
+    id: 'awards',
+    title: 'Why We Fit the Awards',
+    steps: 2,
+    start: 375,
+    end: 375,
+    speaker: 'Speaker 1',
+    appendix: true,
+    cueLabels: ['Title', 'Five awards we are aiming for, and why'],
+    script: ['▶ 1 — الجوائز الخمس', '(اشرح بإيجاز ليه EmberNova مناسب لكل جائزة — من غير مبالغة.)'],
+    note: 'الجوائز الخمس: Best Use of Science · Best Use of Data · Best Use of Technology · Galactic Impact · Best Use of Storytelling. كل جملة مبنية على ما هو موجود فعلاً في المنتج.',
+  },
 ]
 
-export const TOTAL_TARGET = SCENES[SCENES.length - 1].end
+export const TOTAL_TARGET = SCENES.filter((s) => !s.appendix).slice(-1)[0].end
 
 export type Pos = { scene: number; step: number }
 export const clampPos = (p: Pos): Pos => {

@@ -278,6 +278,10 @@ export function audioCue(scene: number, step: number) {
     case 8:
       sound.setMood('space')
       break
+    case 10:
+    case 11:
+      sound.setMood('space')
+      break
     case 9:
       if (step === 0) sound.setMood('ocean')
       if (step === 1) sound.setMood('space')
