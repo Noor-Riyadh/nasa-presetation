@@ -256,7 +256,7 @@ export const SCENES: SceneMeta[] = [
     end: 375,
     speaker: 'Speaker 1',
     appendix: true,
-    cueLabels: ['The Team (title)', 'Four team members and their roles'],
+    cueLabels: ['The Team (title)', 'Five team members and their roles'],
     script: ['▶ 1 — الفريق', '(قدّم أعضاء الفريق وأدوار كل واحد — جملة لكل شخص.)'],
     note: 'شريحة الفريق — الأدوار مكتوبة بالإنجليزي على الشاشة. عدّل الأوصاف في src/scenes3.tsx لو محتاج.',
   },
@@ -270,7 +270,7 @@ export const SCENES: SceneMeta[] = [
     appendix: true,
     cueLabels: ['Title', 'Five awards we are aiming for, and why'],
     script: ['▶ 1 — الجوائز الخمس', '(اشرح بإيجاز ليه EmberNova مناسب لكل جائزة — من غير مبالغة.)'],
-    note: 'الجوائز الخمس: Best Use of Science · Best Use of Data · Best Use of Technology · Galactic Impact · Best Use of Storytelling. كل جملة مبنية على ما هو موجود فعلاً في المنتج.',
+    note: 'الجوائز الخمس: Best Use of Data · Best Use of Technology · Galactic Impact · Art & Technology · Best Use of Storytelling. كل جملة مبنية على ما هو موجود فعلاً في المنتج.',
   },
 ]
 

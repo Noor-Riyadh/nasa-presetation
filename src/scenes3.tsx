@@ -16,7 +16,12 @@ const TEAM = [
   {
     name: 'Noor Riyadh',
     role: 'Full-Stack Developer',
-    does: ['Built the EmberNova web application end to end', 'Built this cinematic presentation experience'],
+    does: ['Led full-stack development of the EmberNova web app', 'Built this cinematic presentation experience'],
+  },
+  {
+    name: 'Shrouk Atwa',
+    role: 'Full-Stack Developer',
+    does: ['Built product features across front end and back end', 'Helped bring NASA data into the interface'],
   },
   {
     name: 'Aya Hesham',
@@ -43,7 +48,7 @@ export function Scene10() {
       <div className="team-row">
         {TEAM.map((m, i) => (
           <R key={m.name} at={1} v="rise" d={i * 0.18} className="member">
-            <div className="avatar">{initials(m.name)}</div>
+            <div className="avatar">{m.name === 'Shrouk Atwa' ? 'SH' : initials(m.name)}</div>
             <div className="mname">{m.name}</div>
             <div className="mrole">{m.role}</div>
             <ul>
@@ -64,11 +69,6 @@ export function Scene10() {
 
 const AWARDS = [
   {
-    name: 'Best Use of Science',
-    def: 'The best and most valid use of science and the scientific method.',
-    why: 'Every number traces to a NASA source. Validity checklists name confounders, and the system states what the evidence does not show — association, never extrapolation.',
-  },
-  {
     name: 'Best Use of Data',
     def: 'Makes space data accessible, or leverages it for a unique application.',
     why: '34 NASA investigations, 93 reports and 1,161 test records in one searchable, comparable workspace — with an evidence-gap map of what has never been measured.',
@@ -82,6 +82,11 @@ const AWARDS = [
     name: 'Galactic Impact',
     def: 'The most potential to improve life on Earth or in the universe.',
     why: 'Faster access to fire-safety evidence for future crewed missions — better decisions where the nearest help is a planet away.',
+  },
+  {
+    name: 'Art & Technology',
+    def: 'Most effectively combines technical and creative skills.',
+    why: 'A rigorous evidence engine paired with a cinematic experience — real NASA imagery, an original ember-to-nova reveal, and a presentation built as software.',
   },
   {
     name: 'Best Use of Storytelling',

@@ -348,3 +348,9 @@ kbd { font-family: var(--mono); font-size: 0.7em; border: 1px solid #ffffff40; b
 .aw-name { font-size: 48px; }
 .aw-why { font-size: 24px; }
 .aw-foot { bottom: 22px; }
+.team-row { grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.member { padding: 34px 26px 32px; }
+.avatar { width: 92px; height: 92px; font-size: 42px; margin-bottom: 26px; }
+.mname { font-size: 46px; }
+.mrole { font-size: 17px; margin: 12px 0 22px; }
+.member li { font-size: 23px; }
